@@ -11,13 +11,21 @@ def is_Prime(x):
             return False
     return True
 
+prime_num=[]
+
+for i in range(1,2*123456+1):
+    if is_Prime(i):
+        prime_num.append(i)
 
 while True:
     n=int(input())
-    cnt=0
+    cnt = 0
     if n==0:
         break
-    for j in range(n+1,2*n+1):
-        if is_Prime(j):
-            cnt+=1
-    print(cnt)
+    else:
+        for i in range(len(prime_num)):
+            if prime_num[i]>n and prime_num[i]<=2*n:
+                cnt+=1
+            elif prime_num[i]>2*n:
+                break
+        print(cnt)
