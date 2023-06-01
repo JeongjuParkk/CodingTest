@@ -5,7 +5,7 @@ n=int(input())
 k=int(input())
 
 start=1
-end=k
+end=k                                   #2차원 리스트에서 k번째 데이터는 k를 넘지 않음 그래서 end=k로 설정
 while start<=end:
     mid=(start+end)//2
     num=0

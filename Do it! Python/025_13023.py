@@ -2,15 +2,16 @@ import sys
 sys.setrecursionlimit(10000)
 input=sys.stdin.readline
 
-def DFS(graph,v,visted,depth):
+#DFS인데 깊이가 5인 경우, 1 아니면 0
+def DFS(v,visted,depth):
     global res
-    if depth==5 or res==True:
+    if depth==5:                        #만약 깊이가 5이면 True 반환
         res=True
         return
     visted[v]=True
-    for i in graph[v]:
+    for i in Mygraph[v]:                #기존 DFS와 방식 동일
         if not visted[i]:
-            DFS(graph,i,visted,depth+1)
+            DFS(i,visted,depth+1)       #DFS재귀 할때마다 깊이 1씩 증가
     visted[v]=False
 
 n,m=map(int,input().split())
@@ -24,7 +25,7 @@ for i in range(m):
     Mygraph[b].append(a)
 
 for i in range(n):
-    DFS(Mygraph,i,visited,1)
+    DFS(i,visited,1)
     if res:
         break
 

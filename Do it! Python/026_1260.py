@@ -3,6 +3,7 @@ from collections import deque
 sys.setrecursionlimit(10000)
 input=sys.stdin.readline
 
+#DFS와 BFS 비교
 def DFS(graph,val,visted):
     visted[val]=True
     print(val,end=' ')
