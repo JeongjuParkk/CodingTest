@@ -24,6 +24,6 @@ while start<=end:                           #시작지점이 끝점보다 작거
     else:                                   #m개로 저장 가능한 경우, end=mid-1
         end=mid-1
 
-print(start)                                #start가 정답인 이유 : mid사이즈 m개로 저장 가능하면 end를 줄여나감=사이즈 감소
+print(end)                                #start가 정답인 이유 : mid사이즈 m개로 저장 가능하면 end를 줄여나감=사이즈 감소
                                             #그러다보면 어느 순간부터 m개로 저장이 불가능하고 start가 증가=사이즈 증가
                                             #그렇게 사이즈를 감소시키거나 증가시키다보면 최적의 mid값은 start와 동일해짐
